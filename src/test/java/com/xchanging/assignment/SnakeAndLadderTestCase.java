@@ -14,8 +14,8 @@ public class SnakeAndLadderTestCase {
 
 		Position position = new Position();
 
-		currentPositionPlayer1 = position.getNewPosition(currentPositionPlayer1,
-				diceOutcome);
+		currentPositionPlayer1 = position.getNewPosition(
+				currentPositionPlayer1, diceOutcome);
 
 		Player player = new Player("player1");
 
@@ -30,12 +30,12 @@ public class SnakeAndLadderTestCase {
 		Board board = new Board(size);
 		Dice dice = new Dice();
 		int diceOutcome = dice.rollDice();
-		int currentPositionPlayer1 =101;
+		int currentPositionPlayer1 = 101;
 
 		Position position = new Position();
 
-		currentPositionPlayer1 = position.getNewPosition(currentPositionPlayer1,
-				diceOutcome);
+		currentPositionPlayer1 = position.getNewPosition(
+				currentPositionPlayer1, diceOutcome);
 
 		Player player = new Player("player1");
 		try {
@@ -58,16 +58,16 @@ public class SnakeAndLadderTestCase {
 
 		Position position = new Position();
 
-		currentPositionPlayer1 = position.getNewPosition(currentPositionPlayer1,
-				diceOutcome);
+		currentPositionPlayer1 = position.getNewPosition(
+				currentPositionPlayer1, diceOutcome);
 
 		Player player = new Player("player1");
 
 		board.play(player, currentPositionPlayer1);
 		diceOutcome = dice.rollDice();
 		currentPositionPlayer1 = 20;
-		currentPositionPlayer1 = position.getNewPosition(currentPositionPlayer1,
-				diceOutcome);
+		currentPositionPlayer1 = position.getNewPosition(
+				currentPositionPlayer1, diceOutcome);
 		try {
 			board.play(player, currentPositionPlayer1);
 		} catch (ConsequtivePlayOfSamePlayerException e) {
@@ -91,8 +91,8 @@ public class SnakeAndLadderTestCase {
 		Dice dice = new Dice();
 		int diceOutcome = dice.rollDice();
 		currentPositionPlayer1 = 20;
-		currentPositionPlayer1 = position.getNewPosition(currentPositionPlayer1,
-				diceOutcome);
+		currentPositionPlayer1 = position.getNewPosition(
+				currentPositionPlayer1, diceOutcome);
 
 		board.play(player, currentPositionPlayer1);
 		assertTrue(board.hasPlayerAt(currentPositionPlayer1));
@@ -144,7 +144,5 @@ public class SnakeAndLadderTestCase {
 		board.play(player2, currentPositionPlayer2);
 		assertTrue(board.hasWon(player2, currentPositionPlayer2));
 	}
-	
-	
 
 }
