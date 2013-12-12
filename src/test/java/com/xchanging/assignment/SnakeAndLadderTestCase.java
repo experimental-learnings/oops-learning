@@ -144,22 +144,6 @@ public class SnakeAndLadderTestCase {
 		board.play(player2, currentPositionPlayer2);
 		assertTrue(board.hasWon(player2, currentPositionPlayer2));
 	}
-	@Test
-	public static void shouldDeclareWinnerOnReachingHundered1() {
-		final Integer size = 100;
-		Board board = new Board(size);
-
-		int currentPositionPlayer1 = 99;
-
-		Player player1 = new Player("player1");
-
-		board.play(player1, currentPositionPlayer1);
-		assertEquals((board.hasWon(player1, currentPositionPlayer1)), false);
-		int currentPositionPlayer2 = 100;
-
-		Player player2 = new Player("player2");
-		board.play(player2, currentPositionPlayer2);
-		assertTrue(board.hasWon(player2, currentPositionPlayer2));
-	}
+	
 
 }
